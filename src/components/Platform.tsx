@@ -1,8 +1,7 @@
-import { BentoGridSecondDemo } from "./BentoGrid";
 import { ModernBentoGrid } from "./ui/bento-grid";
 
 export default function Platform(){
-    let saad = "saad"
+    
     return(
         <main className="flex flex-col py-15">
             <div className="flex flex-col gap-4 text-center gap-y-5 mb-10">
