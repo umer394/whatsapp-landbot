@@ -1,6 +1,9 @@
+import Faqs from "@/components/Faqs";
 import Hero from "@/components/Hero";
 import Marketing from "@/components/Marketing";
 import Platform from "@/components/Platform";
+import Resources from "@/components/Resources";
+import Support from "@/components/Support";
 
 
 export default function Home() {
@@ -9,6 +12,9 @@ export default function Home() {
       <Hero/>
       <Marketing/>
       <Platform/>
+      <Support/>
+      <Resources/>
+      <Faqs/>
     </div>
   );
 }

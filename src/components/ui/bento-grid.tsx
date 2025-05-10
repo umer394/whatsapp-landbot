@@ -1,27 +1,31 @@
 "use client"
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
-
+import Image from "next/image";
 const tabContents = [
   {
     title: "No-code builder",
     description:
       "Design sophisticated flows with conditional logic, formulas, and rich media, with a visual drag-and-drop interface.",
+    image: "/grid1.png",
   },
   {
     title: "Opt-ins widget",
     description:
       "Landbot lets you test new experiences live as you try your WhatsApp bot on your phone or via preview.",
+    image: "/grid1.png",
   },
   {
     title: "Campaign manager",
     description:
       "Move conversations to human support and manage any number of agents and chats from one central team inbox.",
+    image: "/grid1.png",
   },
   {
     title: "Notifications",
     description:
       "Send and receive data in real time with our native integrations, Webhooks, or API.",
+    image: "/grid1.png",
   },
 ];
 
@@ -49,91 +53,73 @@ export const ModernBentoGrid = ({ className }: { className?: string }) => {
       </div>
       <div
         className={cn(
-          "mx-auto grid max-w-7xl grid-cols-1 gap-4 md:grid-cols-5 md:grid-rows-2 auto-rows-[18rem] ",
+          "mx-auto grid max-w-7xl grid-cols-1 gap-4 md:grid-cols-5 md:grid-rows-2 auto-rows-[32rem] ",
           className
         )}
       >
         {/* Main interactive grid item */}
-        <div className="relative col-span-full bg-[#F9F9FF] row-span-1 bg-white dark:bg-black rounded-xl shadow-lg border border-neutral-200 dark:border-white/[0.2] flex flex-col p-0 transition hover:shadow-2xl">
+        <div className="relative col-span-full bg-[#F9F9FF] row-span-1  dark:bg-black rounded-xl  border border-neutral-200 dark:border-white/[0.2] flex flex-col p-0 transition ">
           {/* Two-column layout below pills */}
-          <div className="">
+          <div className=" flex justify-between bg-[#F9F9FF] p-20">
             {/* Left: Title and description */}
-            <div className="flex-1 flex flex-col justify-center min-w-[220px]">
-              <h2 className="text-2xl md:text-3xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
+            <div className="flex-1  flex flex-col  justify-center min-w-[220px]">
+              <h2 className="text-2xl md:text-4xl capitalize font-bold text-[#33405E] dark:text-neutral-100 mb-2">
                 {tabContents[activeTab].title}
               </h2>
-              <p className="text-neutral-600 dark:text-neutral-300 text-base md:text-lg">
+              <p className="text-[#33405E] max-w-xl dark:text-neutral-300 text-base md:text-lg">
                 {tabContents[activeTab].description}
               </p>
             </div>
             {/* Right: Placeholder for chat UI illustration */}
-            
+            <div className=" ">
+              <Image src={tabContents[activeTab].image} alt="Bento Grid 1" width={400} height={500} />
+            </div>
           </div>
         </div>
 
         {/* Test environment - 55% width */}
-        <div className="bg-white dark:bg-black rounded-xl shadow-lg border border-neutral-200 dark:border-white/[0.2] flex flex-col items-start justify-between p-6 transition hover:shadow-2xl col-span-full md:col-span-3">
-          <div className="w-full">
-            <h3 className="font-bold text-xl text-neutral-800 dark:text-neutral-100 mb-3">Test environment</h3>
-            <p className="text-neutral-600 dark:text-neutral-300 text-sm">Landbot lets you test new experiences live as you try your WhatsApp bot on your phone or via preview.</p>
+        <div className=" rounded-xl gap-y-8  bg-[#F9F9FF]  border border-neutral-200 dark:border-white/[0.2] flex flex-col items-start justify-center p-6 transition  col-span-full md:col-span-3">
+        <div className="w-full flex items-center justify-center ">
+           <Image src="/grid2.png" alt="Test Environment" width={600} height={500} />
           </div>
-          <div className="w-full mt-4">
-            <img src="/test-environment.png" alt="Test Environment" className="w-full h-32 object-contain" />
+          <div className="w-full px-10">
+            <h3 className="font-bold text-4xl text-[#33405E] dark:text-neutral-100 mb-3">Test environment</h3>
+            <p className="text-[#33405E] dark:text-neutral-300 max-w-xl text-xl ">Landbot lets you test new experiences live as you try your WhatsApp bot on your phone or via preview.</p>
           </div>
+          
         </div>
 
         {/* Analytics - 45% width */}
-        <div className="bg-white dark:bg-black rounded-xl shadow-lg border border-neutral-200 dark:border-white/[0.2] flex flex-col items-start justify-between p-6 transition hover:shadow-2xl col-span-full md:col-span-2">
-          <div className="w-full">
-            <h3 className="font-bold text-xl text-neutral-800 dark:text-neutral-100 mb-3">Analytics</h3>
-            <p className="text-neutral-600 dark:text-neutral-300 text-sm">See goals, view reports, and analyze drop-offs in the conversation with our chatbot analytics.</p>
+        <div className="bg-[#F9F9FF]  dark:bg-black rounded-xl  border border-neutral-200 dark:border-white/[0.2] flex flex-col items-start justify-between p-6 transition  col-span-full md:col-span-2">
+        <div className="w-full flex items-center justify-centermt-10 ">
+           <Image src="/grid3.png" alt="Test Environment" width={600} height={500} />
           </div>
-          <div className="w-full mt-4">
-            <img src="/analytics.png" alt="Analytics" className="w-full h-32 object-contain" />
+          <div className="w-full px-6 mb-8">
+            <h3 className="font-bold text-4xl text-[#33405E] dark:text-neutral-100 mb-3">Team inbox</h3>
+            <p className="text-[#33405E] dark:text-neutral-300 max-w-2xl text-xl ">Move conversations to human support and manage any number of agents and chats from one central team inbox.</p>
           </div>
         </div>
 
         {/* Team Inbox - 40% width */}
-        <div className="bg-white dark:bg-black rounded-xl shadow-lg border border-neutral-200 dark:border-white/[0.2] flex flex-col items-start justify-between p-6 transition hover:shadow-2xl col-span-full md:col-span-2">
-          <div className="w-full">
-            <h3 className="font-bold text-xl text-neutral-800 dark:text-neutral-100 mb-3">Team Inbox</h3>
-            <p className="text-neutral-600 dark:text-neutral-300 text-sm">Move conversations to human support and manage any number of agents and chats from one central team inbox.</p>
+        <div className="bg-[#F9F9FF] gap-y-10  dark:bg-black rounded-xl  border border-neutral-200 dark:border-white/[0.2] flex flex-col items-start justify-between p-6 transition  col-span-full md:col-span-2">
+          <div className="w-full flex items-center justify-center">
+            <Image src="/grid4.png" alt="Test Environment" width={500} height={500} />
           </div>
-          <div className="w-full mt-4 flex justify-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-blue-100 overflow-hidden">
-              <img src="/avatar1.png" alt="Team Member 1" className="w-full h-full object-cover" />
-            </div>
-            <div className="w-10 h-10 rounded-full bg-green-100 overflow-hidden">
-              <img src="/avatar2.png" alt="Team Member 2" className="w-full h-full object-cover" />
-            </div>
-            <div className="w-10 h-10 rounded-full bg-yellow-100 overflow-hidden">
-              <img src="/avatar3.png" alt="Team Member 3" className="w-full h-full object-cover" />
-            </div>
+          <div className="w-full px-6 mb-8">
+            <h3 className="font-semibold text-4xl text-[#33405E]  dark:text-neutral-100 mb-3">Integrations</h3>
+            <p className="text-[#33405E] dark:text-neutral-300 max-w-2xl text-xl">Send and receive data in real-time with our native integrations, Webhooks, or API.</p>
           </div>
+         
         </div>
 
         {/* Integrations - 60% width */}
-        <div className="bg-white dark:bg-black rounded-xl shadow-lg border border-neutral-200 dark:border-white/[0.2] flex flex-col items-start justify-between p-6 transition hover:shadow-2xl col-span-full md:col-span-3">
-          <div className="w-full">
-            <h3 className="font-bold text-xl text-neutral-800 dark:text-neutral-100 mb-3">Integrations</h3>
-            <p className="text-neutral-600 dark:text-neutral-300 text-sm">Send and receive data in real-time with our native integrations, Webhooks, or API. Connect with your favorite tools seamlessly.</p>
+        <div className="bg-[#F9F9FF] gap-y-6 dark:bg-black rounded-xl  border border-neutral-200 dark:border-white/[0.2] flex flex-col items-start justify-between p-6 transition  col-span-full md:col-span-3">
+        <div className="w-full flex items-center justify-center ">
+           <Image src="/grid5.png" alt="Test Environment" width={600} height={500} />
           </div>
-          <div className="w-full mt-4 flex justify-start gap-4">
-            <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-              </svg>
-            </div>
-            <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-              <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 14H7v-4h4v4zm0-6H7V7h4v4zm6 6h-4v-4h4v4zm0-6h-4V7h4v4z" />
-              </svg>
-            </div>
-            <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
-              <svg className="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z" />
-              </svg>
-            </div>
+          <div className="w-full px-10 mb-8">
+            <h3 className="font-semibold text-4xl text-[#33405E] dark:text-neutral-100 mb-3">Analytics</h3>
+            <p className="text-[#33405E] dark:text-neutral-300 max-w-xl text-2xl ">Set goals, view reports, and analyze drop offs in the conversation with our chatbot analytics.</p>
           </div>
         </div>
       </div>
