@@ -31,7 +31,7 @@ export default function Support() {
       <div className="flex justify-between gap-x-10">
         <div className="rounded-xl shadow-sm  bg-white border py-10 px-5 flex flex-col gap-y-6">
             <Image src="/stars.png" className="rounded-xl" alt="Support" width={200} height={200} />
-            <h3 className="text-[#33405E]  text-xl">"Very happy with the experience!"</h3>
+            <h3 className="text-[#33405E]  text-xl">&quot;Very happy with the experience!&quot;</h3>
             <div className="flex gap-x-2">
                 <Image src="/profile.avif" className="rounded-xl" alt="Support" width={50} height={30} />
                 <div>
@@ -42,7 +42,7 @@ export default function Support() {
         </div>
         <div className="rounded-xl shadow-sm  bg-white border py-10 px-5 flex flex-col gap-y-6">
             <Image src="/stars.png" className="rounded-xl" alt="Support" width={200} height={200} />
-            <h3 className="text-[#33405E]  text-xl">"Very happy with the experience!"</h3>
+            <h3 className="text-[#33405E]  text-xl">&quot;Very happy with the experience!&quot;</h3>
             <div className="flex gap-x-2">
                 <Image src="/profile.avif" className="rounded-xl" alt="Support" width={50} height={30} />
                 <div>
@@ -53,7 +53,7 @@ export default function Support() {
         </div>
         <div className="rounded-xl shadow-sm  bg-white border py-10 px-5 flex flex-col gap-y-6">
             <Image src="/stars.png" className="rounded-xl" alt="Support" width={200} height={200} />
-            <h3 className="text-[#33405E]  text-xl">"Very happy with the experience!"</h3>
+            <h3 className="text-[#33405E]  text-xl">&quot;Very happy with the experience!&quot;</h3>
             <div className="flex gap-x-2">
                 <Image src="/profile.avif" className="rounded-xl" alt="Support" width={50} height={30} />
                 <div>
@@ -64,7 +64,7 @@ export default function Support() {
         </div>
         <div className="rounded-xl shadow-sm  bg-white border py-10 px-5 flex flex-col gap-y-6">
             <Image src="/stars.png" className="rounded-xl" alt="Support" width={200} height={200} />
-            <h3 className="text-[#33405E]  text-xl">"Very happy with the experience!"</h3>
+            <h3 className="text-[#33405E]  text-xl">&quot;Very happy with the experience!&quot;</h3>
             <div className="flex gap-x-2">
                 <Image src="/profile.avif" className="rounded-xl" alt="Support" width={50} height={30} />
                 <div>
