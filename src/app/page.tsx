@@ -8,7 +8,7 @@ import Support from "@/components/Support";
 
 export default function Home() {
   return (
-    <div className="max-w-[1200px] mx-auto">
+    <div className="w-full max-w-[1200px] mx-auto">
       <Hero/>
       <Marketing/>
       <Platform/>
